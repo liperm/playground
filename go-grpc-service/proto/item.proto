@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option go_package = "./pb";
+
+service Item {
+  rpc GetItem (GetItemRequest) returns (GetItemResponse);
+}
+
+message GetItemRequest {
+  int64 id = 1;
+}
+
+message GetItemResponse {
+  int64 id = 1;
+  double price = 2;
+}
